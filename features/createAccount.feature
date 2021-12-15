@@ -12,7 +12,8 @@ Feature: Create Account
     When she create a new account using email
     | email                  |
     | siow_chan@hotmail.com  |
-    Then she able to see the fill up form
+    And she fill up the registration form
+    Then she is able to register
   
 
   

@@ -22,11 +22,21 @@ When(
   async (actor: Actor, table: DataTable) => {
     const email = table.hashes()[0].email
     await actor.attemptsTo(
-     UseEmail.forNewAccount(email)  
+      UseEmail.forNewAccount(email),
+      VerifyAccount.fillUpForm()
     )
   }
 )
 
-Then('{pronoun} to see the fill up form', async (actor: Actor) => {
-   await actor.attemptsTo(VerifyAccount.fillUpForm())
+When(
+  '{pronoun} fill up the registration form',
+  async (actor: Actor, table: DataTable) => {
+    const email = table.hashes()[0].email
+    await actor.attemptsTo(Log.the('TODO'))
+  }
+)
+
+
+Then('{pronoun} she is able to register', async (actor: Actor) => {
+  await actor.attemptsTo(Log.the('TODO')
 })

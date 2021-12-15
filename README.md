@@ -10,3 +10,8 @@ chromedriver
 
 
 http://automationpractice.com
+
+Todo:
+```
+Automate the fill up of the form
+```
