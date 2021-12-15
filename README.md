@@ -1,4 +1,4 @@
-# Web Automation for tictactoe using Serenity/JS Cucumber WebdriverIO Template
+# Web Automation practice using Serenity/JS Cucumber WebdriverIO Template
 
 _In MacOS_
 
@@ -9,7 +9,4 @@ chromedriver
 ```
 
 
-references:
-```
-https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html
-```
+http://automationpractice.com
