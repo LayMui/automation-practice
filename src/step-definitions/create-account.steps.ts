@@ -38,5 +38,5 @@ When(
 
 
 Then('{pronoun} she is able to register', async (actor: Actor) => {
-  await actor.attemptsTo(Log.the('TODO')
+  await actor.attemptsTo(Log.the('TODO'))
 })
