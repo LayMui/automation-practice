@@ -6,6 +6,7 @@ import { Navigate } from '@serenity-js/webdriverio'
 import { SignIn } from '../tasks/signIn'
 import { UseEmail } from '../tasks/UseEmail'
 import { VerifyAccount } from '../tasks/VerifyAccount'
+import { FillUp } from '../tasks/FillUp'
 
 
 require('dotenv').config()
@@ -32,7 +33,7 @@ When(
   '{pronoun} fill up the registration form',
   async (actor: Actor, table: DataTable) => {
     const email = table.hashes()[0].email
-    await actor.attemptsTo(Log.the('TODO'))
+    await actor.attemptsTo(FillUp.registrationForm())
   }
 )
 

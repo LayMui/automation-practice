@@ -3,7 +3,7 @@ import { by, Target, Text } from '@serenity-js/webdriverio'
 import { Element } from 'webdriverio'
 import { includes } from '@serenity-js/assertions'
 
-export const accountPage = {
+export const authenticationPage = {
   emailInput: () => Target.the('email field').located(by.id('email_create')),
   submitButton: () =>
     Target.the('submit button').located(by.id('SubmitCreate')),
