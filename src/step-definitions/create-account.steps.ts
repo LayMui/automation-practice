@@ -7,6 +7,8 @@ import { SignIn } from '../tasks/signIn'
 import { UseEmail } from '../tasks/UseEmail'
 import { VerifyAccount } from '../tasks/VerifyAccount'
 import { FillUp } from '../tasks/FillUp'
+import { registrationPage } from '../page-objects/registrationPage'
+import { Select } from '@serenity-js/web'
 
 
 require('dotenv').config()
@@ -19,12 +21,11 @@ Given(
 )
 
 When(
-  '{pronoun} create a new account using email',
+  '{pronoun} create a new account using email', {timeout: 80000},
   async (actor: Actor, table: DataTable) => {
     const email = table.hashes()[0].email
     await actor.attemptsTo(
       UseEmail.forNewAccount(email),
-      VerifyAccount.fillUpForm()
     )
   }
 )
@@ -38,6 +39,6 @@ When(
 )
 
 
-Then('{pronoun} she is able to register', async (actor: Actor) => {
+Then('{pronoun} is able to register', async (actor: Actor) => {
   await actor.attemptsTo(Log.the('TODO'))
 })

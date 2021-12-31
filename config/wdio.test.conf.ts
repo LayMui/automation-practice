@@ -6,8 +6,11 @@ import { SerenityBDDReporter } from '@serenity-js/serenity-bdd'
 import {
   Photographer,
   TakePhotosOfInteractions,
-  WebdriverIOConfig,
-} from '@serenity-js/webdriverio'
+  
+} from '@serenity-js/web'
+
+
+import { WebdriverIOConfig } from '@serenity-js/webdriverio'
 
 import { Actors } from '../src'
 

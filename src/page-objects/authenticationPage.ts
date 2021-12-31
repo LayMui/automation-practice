@@ -10,7 +10,7 @@ export const authenticationPage = {
 
   accountHeading: (headingText: string): Question<Promise<Element<'async'>>> => {
     return Target.all('heading')
-      .located(by.css('.page-subheading'))
+      .located(by.css('.account_creation'))
       .where(Text, includes(headingText))
       .first()
   },

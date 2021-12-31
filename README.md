@@ -15,3 +15,7 @@ Todo:
 ```
 Automate the fill up of the form
 ```
+
+```
+yarn upgrade --latest
+```
