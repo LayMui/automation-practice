@@ -1,7 +1,6 @@
-import { Answerable, Question } from '@serenity-js/core'
-import { PageElement } from '@serenity-js/web'
+import { By, PageElement } from '@serenity-js/web'
 import { by, Target } from '@serenity-js/webdriverio'
-import { Element } from 'webdriverio'
+
 
 export const registrationPage = {
   title: (gender: string) => {
@@ -30,9 +29,12 @@ export const registrationPage = {
 
   password: () => Target.the('password field').located(by.id('passwd')),
 
-  DOBDays: () => Target.the('DOB days field').located(by.id('days')),
-  DOBMonths: () => Target.the('DOB months field').located(by.id('months')),
-  DOBYears: () => Target.the('DOB years field').located(by.id('years')),
+   DOBdays: () =>  PageElement.located(By.id('days')),
+ 
+//  DOBDays: () => Target.the('DOB days field').located(by.id('days')),
+ // DOBMonths: () => Target.the('DOB months field').located(by.id('months')),
+ // DOBYears: () => Target.the('DOB years field').located(by.id('years')),
+
 
 
 }

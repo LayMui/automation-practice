@@ -4,7 +4,9 @@ import { Click, Enter, isVisible, Wait } from '@serenity-js/webdriverio'
 import { registrationPage } from '../page-objects/registrationPage'
 
 export const FillUp = {
-  registrationForm: () =>
+    
+
+  registrationForm: () => 
     Task.where(
       `#actor want to fill up the registration form`,
       Wait.upTo(Duration.ofMilliseconds(5000000)).until(
@@ -15,6 +17,8 @@ export const FillUp = {
       Click.on(registrationPage.titleMr()),
       Enter.theValue('LayMui').into(registrationPage.firstName()),
       Enter.theValue('Toh').into(registrationPage.lastName()),
-      Click.on(registrationPage.DOBDays())
+      Select.value('1').from(registrationPage.DOBdays())
+      
     ),
+
 }

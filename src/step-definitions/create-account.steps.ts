@@ -8,7 +8,7 @@ import { UseEmail } from '../tasks/UseEmail'
 import { VerifyAccount } from '../tasks/VerifyAccount'
 import { FillUp } from '../tasks/FillUp'
 import { registrationPage } from '../page-objects/registrationPage'
-import { Select } from '@serenity-js/web'
+import { By, PageElement, Select } from '@serenity-js/web'
 
 
 require('dotenv').config()
@@ -34,7 +34,17 @@ When(
   '{pronoun} fill up the registration form',
   async (actor: Actor, table: DataTable) => {
     const email = table.hashes()[0].email
-    await actor.attemptsTo(FillUp.registrationForm())
+  
+class DOB {
+  static days = PageElement.located(By.id('days')).describedAs('days')
+  static months = PageElement.located(By.id('months')).describedAs('months')
+  static years = PageElement.located(By.id('years')).describedAs('years')
+}
+
+    await actor.attemptsTo(
+      FillUp.registrationForm(),
+      Select.value('1').from(DOB.days)
+    )
   }
 )
 
