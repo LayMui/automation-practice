@@ -35,15 +35,15 @@ When(
   async (actor: Actor, table: DataTable) => {
     const email = table.hashes()[0].email
   
-class DOB {
-  static days = PageElement.located(By.id('days')).describedAs('days')
-  static months = PageElement.located(By.id('months')).describedAs('months')
-  static years = PageElement.located(By.id('years')).describedAs('years')
-}
+// class DOB {
+//   static days = PageElement.located(By.id('days')).describedAs('days')
+//   static months = PageElement.located(By.id('months')).describedAs('months')
+//   static years = PageElement.located(By.id('years')).describedAs('years')
+// }
 
     await actor.attemptsTo(
       FillUp.registrationForm(),
-      Select.value('1').from(DOB.days)
+     // Select.value('1').from(DOB.days)
     )
   }
 )
