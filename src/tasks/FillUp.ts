@@ -17,8 +17,8 @@ export const FillUp = {
       Click.on(registrationPage.titleMr()),
       Enter.theValue('LayMui').into(registrationPage.firstName()),
       Enter.theValue('Toh').into(registrationPage.lastName()),
-      Select.value('1').from(registrationPage.DOBdays())
-      
+     // Select.value('1').from(registrationPage.DOBdays())
+      Select.values('1').from(registrationPage.DOBDays())
     ),
 
 }

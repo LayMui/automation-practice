@@ -31,7 +31,7 @@ export const registrationPage = {
 
    DOBdays: () =>  PageElement.located(By.id('days')),
  
-//  DOBDays: () => Target.the('DOB days field').located(by.id('days')),
+  DOBDaysUsingTarget: () => Target.the('DOB days field').located(by.id('days')),
  // DOBMonths: () => Target.the('DOB months field').located(by.id('months')),
  // DOBYears: () => Target.the('DOB years field').located(by.id('years')),
 
