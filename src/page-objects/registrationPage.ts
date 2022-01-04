@@ -29,7 +29,7 @@ export const registrationPage = {
 
   password: () => Target.the('password field').located(by.id('passwd')),
 
-   DOBdays: () =>  PageElement.located(By.id('days')),
+  // DOBdays: () =>  PageElement.located(By.id('days')),
  
   DOBDaysUsingTarget: () => Target.the('DOB days field').located(by.id('days')),
  // DOBMonths: () => Target.the('DOB months field').located(by.id('months')),
