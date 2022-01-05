@@ -6,7 +6,7 @@ Feature: Create Account
   Alice wants to create a new account
 
   Background:
-    Given Alice is at the Automation Practice site
+    Given Alice is at the automation practice site
 @test
   Scenario: Able to create a new account
     When she create a new account using email

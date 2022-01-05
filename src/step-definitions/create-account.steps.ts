@@ -13,11 +13,22 @@ import { By, PageElement, Select } from '@serenity-js/web'
 
 require('dotenv').config()
 
+
+class DOB {
+  static days = PageElement.located(By.id('days')).describedAs('days')
+  static months = PageElement.located(By.id('months')).describedAs('months')
+  static years = PageElement.located(By.id('years')).describedAs('years')
+}
+
+
 Given(
-  '{actor} is at the Automation Practice site', {timeout: 80000},
+  '{actor} is at the automation practice site',
+  { timeout: 80000 },
   async (actor: Actor) =>
-    await actor.attemptsTo(Navigate.to(process.env.AUTOMATION_PRACTICE_BASE_URL), 
-    SignIn.toCreateAccount())
+    await actor.attemptsTo(
+      Navigate.to(process.env.AUTOMATION_PRACTICE_BASE_URL),
+      SignIn.toCreateAccount()
+    )
 )
 
 When(
@@ -41,7 +52,7 @@ When(
 
     await actor.attemptsTo(
       FillUp.registrationForm(),
-      // Select.value('1').from(DOB.days)
+       Select.value('1').from(DOB.days)
      //   ✗ ConfigurationError: Alice can't BrowseTheWeb yet. Did you give them the ability to do so?
     )
   }
