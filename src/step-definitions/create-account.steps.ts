@@ -41,7 +41,7 @@ When(
   async (actor: Actor) => { 
     await actor.attemptsTo(
       FillUp.registrationForm(),
-       Select.value('1').from(DOB.days)
+      Select.value('1').from(DOB.days)
     )
   }
 )
