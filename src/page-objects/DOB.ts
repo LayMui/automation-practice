@@ -1,7 +1,7 @@
 import { By, PageElement } from "@serenity-js/web";
 
 
- class DOB {
+export class DOB {
    static days = PageElement.located(
     By.id('days')
   ).describedAs('days')

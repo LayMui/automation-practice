@@ -9,16 +9,11 @@ import { VerifyAccount } from '../tasks/VerifyAccount'
 import { FillUp } from '../tasks/FillUp'
 import { registrationPage } from '../page-objects/registrationPage'
 import { By, PageElement, Select } from '@serenity-js/web'
+import { DOB } from '../page-objects/DOB'
 
 
 require('dotenv').config()
 
-
-class DOB {
-  static days = PageElement.located(By.id('days')).describedAs('days')
-  static months = PageElement.located(By.id('months')).describedAs('months')
-  static years = PageElement.located(By.id('years')).describedAs('years')
-}
 
 
 Given(
@@ -43,17 +38,10 @@ When(
 
 When(
   '{pronoun} fill up the registration form',
-  async (actor: Actor) => {
-    // class DOB {
-    //   static days = PageElement.located(By.id('days')).describedAs('days')
-    //   static months = PageElement.located(By.id('months')).describedAs('months')
-    //   static years = PageElement.located(By.id('years')).describedAs('years')
-    // }
-
+  async (actor: Actor) => { 
     await actor.attemptsTo(
       FillUp.registrationForm(),
        Select.value('1').from(DOB.days)
-     //   ✗ ConfigurationError: Alice can't BrowseTheWeb yet. Did you give them the ability to do so?
     )
   }
 )

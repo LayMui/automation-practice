@@ -1,3 +1,2 @@
-✗ Error: function uses multiple asynchronous interfaces: callback and promise
-[test:test:execute] [0-0]     to use the callback interface: do not return a promise
-[test:test:execute] [0-0]     to use the promise interface: remove the last argument to the function
+Given Alice is at the automation practice site
+[test:test:execute] [0-0] ✗ ConfigurationError: Actors encountered a problem when preparing actor "Alice" for stage
