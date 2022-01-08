@@ -8,13 +8,10 @@ import { UseEmail } from '../tasks/UseEmail'
 import { VerifyAccount } from '../tasks/VerifyAccount'
 import { FillUp } from '../tasks/FillUp'
 import { registrationPage } from '../page-objects/registrationPage'
-import { By, PageElement, Select } from '@serenity-js/web'
+import { Select } from '@serenity-js/web'
 import { DOB } from '../page-objects/DOB'
 
-
 require('dotenv').config()
-
-
 
 Given(
   '{actor} is at the automation practice site',
