@@ -1,9 +1,9 @@
-import { by, Target } from '@serenity-js/webdriverio'
+import { By, PageElement } from '@serenity-js/web'
 
 export const homePage = {
   signIn: () =>
-    Target.the('sign in link').located(
-      by.css('a[title="Log in to your customer account"]')
+    PageElement.located(
+      By.css('a[title="Log in to your customer account"]')
     ),
 }
 

@@ -1,14 +1,12 @@
 import 'expect-webdriverio'
 
 import { DataTable, Given, Then, When } from '@cucumber/cucumber'
-import { Actor, actorInTheSpotlight, Log } from '@serenity-js/core'
-import { Navigate } from '@serenity-js/webdriverio'
+import { Actor, Log } from '@serenity-js/core'
+
 import { SignIn } from '../tasks/signIn'
 import { UseEmail } from '../tasks/UseEmail'
-import { VerifyAccount } from '../tasks/VerifyAccount'
 import { FillUp } from '../tasks/FillUp'
-import { registrationPage } from '../page-objects/registrationPage'
-import { Select } from '@serenity-js/web'
+import { Navigate, Select } from '@serenity-js/web'
 import { DOB } from '../page-objects/DOB'
 
 require('dotenv').config()
