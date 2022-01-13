@@ -1,5 +1,3 @@
-Given Alice is at the automation practice site
-[test:test:execute] [0-0] ✗ ConfigurationError: Actors encountered a problem when preparing actor "Alice" for stage
+ ✗ Alice selects value '1' from days (54ms)
+[test:test:execute] [0-0]       invalid selector: invalid selector: An invalid or illegal selector was specified
 
-
-✗ TypeError: Cannot read properties of undefined (reading 'to')
