@@ -7,7 +7,7 @@ export const FillUp = {
   registrationForm: () => 
     Task.where(
       `#actor want to fill up the registration form`,
-      Wait.upTo(Duration.ofMilliseconds(50000)).until(
+      Wait.upTo(Duration.ofMilliseconds(500000)).until(
         registrationPage.titleMr(),
         isVisible()
       ),
