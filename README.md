@@ -28,3 +28,5 @@ Go to chrome and click About chrome, you will see it updating chrome version
 
 On  mac, run 
 ```brew install chromedriver``` to update the version
+
+Objective: To s

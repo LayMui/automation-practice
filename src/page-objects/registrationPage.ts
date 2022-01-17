@@ -24,4 +24,6 @@ export const registrationPage = {
 
   password: () => PageElement.located(By.id('passwd')),
 
+
+
 }

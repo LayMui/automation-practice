@@ -4,8 +4,7 @@ export const homePage = {
   signIn: () =>
     PageElement.located(
       By.css('.login')
-    
-
+   
     ),
 }
 
