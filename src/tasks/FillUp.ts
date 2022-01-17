@@ -17,8 +17,10 @@ export const FillUp = {
       Enter.theValue('LayMui').into(registrationPage.firstName()),
       Enter.theValue('Toh').into(registrationPage.lastName()),
       Click.on(DOB.dropDownDays),
-      Select.value('1').from(DOB.days),
-      // Click.on(DOB.dropDownMonths),
-      // Select.value('January').from(DOB.months)
-    ),
+      Select.option('1').from(DOB.days),
+      Click.on(DOB.dropDownMonths),
+      Select.option('January').from(DOB.months),
+      Click.on(DOB.dropDownYears),
+      Select.option('2022').from(DOB.years)
+      ),
 }
