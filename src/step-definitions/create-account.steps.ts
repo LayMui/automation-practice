@@ -35,7 +35,7 @@ When(
   '{pronoun} fill up the registration form',
   async (actor: Actor) => { 
     await actor.attemptsTo(
-      FillUp.registrationForm(),
+      FillUp.registrationForm('LayMui', 'Toh'),
     )
   }
 )
